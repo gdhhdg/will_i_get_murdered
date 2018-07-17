@@ -1,0 +1,11 @@
+<% include head.ejs %>
+<div class="container">
+<h3 id="title"><%= title %></h3>
+<%if (crimeData.rate == null){%>
+<h4>Sorry. Crime data for that city is not available. Please choose another city.</h4>
+<% } else { %>
+<h4>You have a <%= parseInt(crimeData.rate)/100,000*100 %>% chance of being a victim of <%=crime %> in <%= crimeData.city%></h4>
+<% } %>
+
+<h5>View more info <a target="_blank" href="<%= url %>">here</a></h5>
+</div>

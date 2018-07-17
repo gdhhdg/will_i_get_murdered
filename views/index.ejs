@@ -1,0 +1,35 @@
+<% include head.ejs %>
+  <body>
+  <div class="container" id="main-wrap">
+      <div class=" container title-wrap">
+      <h3 id="title"><%= title %></h3>
+    <div class="container">
+      <div class="row">
+        <div class="col xl12" id="state-form-wrapper">
+  <% include states.ejs %>
+        </div>
+        <form action="city" method="get" id="cities">
+        <div class="col xl12 form-div" >
+            <label for="city">Choose a City</label>
+            <% include city.ejs %>
+        </div>
+      <div class="row">
+        <div class="col xl12 form-div">
+          <% include crimeList.ejs %>
+        </div>
+          <div class="container">
+        <button class="btn waves-effect waves-light form-div" type="submit">Submit
+        </button>
+          </div>
+      </div>
+    </form>
+    </div>
+    </div>
+      </div>
+      <div class="loading"></div>
+      <div class="container slider-wrap">
+          <% include slider.ejs %>
+      </div>
+
+  </body>
+</html>

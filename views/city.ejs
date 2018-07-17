@@ -1,0 +1,7 @@
+<div class="input-field col s12">
+    <select name="city" class="browser-default">
+        <% for(i = 0; i < cities.length; i++){  %>
+        <option name="city"  value="<%= cities[i].cityURL %>"><%= cities[i].cityName %></option>
+        <%}%>
+    </select>
+</div>

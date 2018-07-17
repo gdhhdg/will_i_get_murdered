@@ -1,0 +1,18 @@
+<form action="/state" method="get" id="states">
+    <label for="state" class="">Choose a State</label>
+    <div class="input-field col xl12">
+    <select name="state" class="browser-default">
+        <% if (currentState == undefined){ %>
+        <% for(i = 0; i < states.length; i++){  %>
+        
+        <option name="state" value="<%= states[i] %>"><%= states[i] %></option>
+        <%} } else { %>
+        <option name="state" value="<%= currentState %>"><%= currentState %></option>
+        <% for(i = 0; i < states.length; i++){  %>
+        <option name="state" value="<%= states[i] %>"><%= states[i] %></option>
+<%}} %>
+
+    </select>
+</div>
+</form>
+
