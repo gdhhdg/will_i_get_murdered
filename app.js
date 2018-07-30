@@ -1,19 +1,14 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var cityRouter = require('./routes/city');
-var stateRouter = require('./routes/state');
-
-
-
-var app = express();
-var favicon = require('serve-favicon');
-
-
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const cityRouter = require('./routes/city');
+const stateRouter = require('./routes/state');
+const app = express();
+const favicon = require('serve-favicon');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -30,8 +25,6 @@ app.use('/', indexRouter);
 app.use('/city', cityRouter);
 app.use('/users', usersRouter);
 app.use('/state', stateRouter);
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

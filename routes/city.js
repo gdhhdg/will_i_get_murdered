@@ -14,7 +14,6 @@ const crimeDic = {
     Theft:"tr:nth-child(11)",
     Auto_Theft:"tr:nth-child(13)",
     Arson:"tr:nth-child(15)",
-
 };
 
 render = function (req, res, next) {
@@ -26,7 +25,6 @@ render = function (req, res, next) {
     });
     next();
 };
-
 
 function parseCrimePromise(req,res, next){
     x(String(req.query.city), {
@@ -40,7 +38,6 @@ function parseCrimePromise(req,res, next){
         res.send('error getting data');
     })
 }
-
 
 router.get('/', parseCrimePromise, render, function(req, res, next) {
 });
